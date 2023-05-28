@@ -2,6 +2,7 @@ package com.project.coches.domain.service;
 
 import com.project.coches.domain.pojo.CarBrandPojo;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,13 @@ public interface ICarBrandService {
      * @return Marca coche guardada
      */
     CarBrandPojo save(CarBrandPojo newCarBrand);
+
+    /**
+     * Actualiza una marca coche
+     * @param carBrandPojo Marca coche a actualizar
+     * @return Marca coche actualizado
+     */
+    Optional<CarBrandPojo> update(CarBrandPojo carBrandPojo);
 
     /**
      * Elimina una marca coche segun el id
